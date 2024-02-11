@@ -1,11 +1,14 @@
-{
+
 
     
-  "routes": [
-    { "src": "^/.*\\.(js|css|png|jpg)$", "headers": { "cache-control": "max-age=604800" } },
-    { "src": "/.*", "dest": "/index.php" }
-  ]
-  
-  
+  {
+    "rewrites": [
+      { "source": "^/.*\\.(js|css|png|jpg)$", "headers": { "cache-control": "max-age=604800" } },
+      { "source": "/(.*)", "destination": "/index.php" }
+    ]
   }
+  
+  
+  
+
   
