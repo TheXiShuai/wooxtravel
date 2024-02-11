@@ -10,7 +10,7 @@
         <div class="slider">
 
             @foreach ($countries as $country)
-            <div id="top-banner-{{ $country->id }}" class="banner" style="background-image: url('{{asset ('assets/images/'.$country->image)}}')">
+            <div id="top-banner-{{ $country->id }}" class="banner" style="background-image: url('{{asset ('assets/images/'.$country->image)}}')";>
 
 
 
