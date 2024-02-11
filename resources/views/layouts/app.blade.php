@@ -38,23 +38,23 @@
                         <nav class="main-nav">
                             <!-- ***** Logo Start ***** -->
                             <a href="{{ url('/') }}" class="logo">
-                                <img src="assets/images/logo.png" alt="">
+                                <img src="{{ asset('assets/images/logo.png') }}" alt="">
                             </a>
                             <!-- ***** Logo End ***** -->
                             <!-- ***** Menu Start ***** -->
                             <ul class="nav">
-                                <li><a href="index.html" class="active">Home</a></li>
-                                <li><a href="about.html">About</a></li>
-                                <li><a href="deals.html">Deals</a></li>
+                                <li><a href="{{route('home')}}" class="active">Home</a></li>
+                                <!-- <li><a href="about.html">About</a></li> -->
+                                <li><a href="{{ route('traveling.deals') }}">Deals</a></li>
 
                                 @guest
 
                                 @if (Route::has('login'))
-                                <li><a href="login.html">Login</a></li>
+                                <li><a href="{{route('login')}}">Login</a></li>
                                 @endif
 
                                 @if (Route::has('register'))
-                                <li><a href="register.html">Register</a></li>
+                                <li><a href="{{route('register')}}">Register</a></li>
                                 @endif
 
                                 @else
@@ -64,6 +64,11 @@
                                     </a>
 
                                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+
+                                        <a class="dropdown-item text-black " href="{{ route('users.bookings') }}">
+                                            My bookings
+                                        </a>
+
                                         <a class="dropdown-item text-black " href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                             {{ __('Logout') }}
@@ -98,7 +103,6 @@
             <div class="row">
                 <div class="col-lg-12">
                     <p>Copyright © 2024 <a href="#">WoOx Travel</a> Company. All rights reserved.
-                        <br>Design: <a href="https://templatemo.com" target="_blank" title="free CSS templates">TemplateMo</a> Distribution: <a href="https://themewagon.com target=" _blank">ThemeWagon</a>
                     </p>
                 </div>
             </div>

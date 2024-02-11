@@ -1,24 +1,24 @@
 <?php
 
-namespace App\Models\Country;
+namespace App\Models\city;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Country extends Model
+class City extends Model
 {
     use HasFactory;
 
-    protected $table = "countries";
+
+    protected $table = "cities";
 
     protected $fillable = [
         "name",
-        "population",
-        "territory",
-        "avg_price",
-        "description",
         "image",
-        "continent"
+        "price",
+        "num_days",
+        "country_id",
+
     ];
 
     public $timesamps = true;
