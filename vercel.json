@@ -1,0 +1,16 @@
+{
+    "builds": [
+      {
+        "src": "resources/sass/app.scss",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "resources/js/app.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      { "src": "/(.*)", "dest": "/index.html" }
+    ]
+  }
+  
