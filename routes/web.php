@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 
 /*
@@ -41,7 +42,6 @@ Route::group(['prefix' => 'traveling'], function () {
 //users pages
 
 Route::get('users/my-bookings', [App\Http\Controllers\Users\UsersController::class, 'bookings'])->name('users.bookings')->middleware('auth:web');
-
 
 
 // admin panel 
